@@ -1,17 +1,36 @@
 aid: villagemd
 name: VillageMD
-description: 'VillageMD is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'VillageMD is a Chicago-based, value-based primary care organization that
+  operates and supports physician practices across the United States through its Village
+  Medical, Village Medical at Home, Summit Health, CityMD and Starling Physicians
+  operating companies, serving millions of patients across primary care, multispecialty
+  and urgent care. It runs clinics — free-standing practices, in-Walgreens practices,
+  home-based care and virtual visits — rather than selling software, and its clinical
+  record and patient-facing digital surface run on athenahealth: patient portals are
+  hosted at practice-specific athenahealth portal subdomains and the Village Medical
+  mobile app is the athenaPatient experience. VillageMD publishes no developer portal,
+  no API documentation, no machine-readable specification and no SDK; the only public
+  machine-readable interfaces touching its patients are athenahealth''s certified FHIR
+  R4 APIs, which are operated and documented by athenahealth, not by VillageMD. Since
+  Sycamore Partners took Walgreens Boots Alliance private in August 2025, VillageMD
+  has operated as a standalone company in that portfolio.'
+image: https://www.villagemd.com/hs-fs/hubfs/villagemd-logo-1.png
 url: https://raw.githubusercontent.com/api-evangelist/villagemd/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Healthcare
+- Primary Care
+- Value-Based Care
+- Medical Practices
+- Urgent Care
+- Telehealth
+- Patient Care
+- Clinics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +39,65 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.villagemd.com/
+- type: About
+  url: https://www.villagemd.com/who-we-are
+- type: Services
+  url: https://www.villagemedical.com/our-services
+- type: PatientPortal
+  url: https://www.villagemedical.com/patient-portal
+- type: Contact
+  url: https://www.villagemd.com/contact-us
+- type: Careers
+  url: https://www.villagemd.com/careers
+- type: Blog
+  url: https://www.villagemedical.com/journey-to-well
+- type: Press
+  url: https://www.villagemd.com/press-releases
+- type: News
+  url: https://www.villagemd.com/news
+- type: GitHubOrganization
+  url: https://github.com/VillageMD
+- type: TermsOfService
+  url: https://www.villagemedical.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.villagemedical.com/privacy-policy
+- type: LegalAndPrivacy
+  url: https://www.villagemd.com/legal-and-privacy
+- type: CodeOfConduct
+  url: https://www.villagemd.com/code-of-conduct
+- type: LinkedIn
+  url: https://www.linkedin.com/company/villagemd
+- type: SecondaryMarket
   url: https://forgeglobal.com/villagemd_stock/
+- type: DomainSecurity
+  url: security/villagemd-domain-security.yml
+- type: LLMsTxt
+  url: llms/villagemd-llms.txt
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: VillageMD is a clinic operator, not a software vendor — villagemd.com and
+    villagemedical.com are HubSpot marketing sites whose sitemaps contain no developer,
+    API, FHIR or interoperability page, no api/developer/docs/fhir subdomain resolves,
+    and patient record access is delivered by its EHR vendor athenahealth, whose
+    certified FHIR R4 API is athenahealth's to publish rather than VillageMD's.
+  evidence:
+  - url: https://www.villagemd.com/llms.txt
+    status: 404
+  - url: https://www.villagemd.com/.well-known/security.txt
+    status: 404
+  - url: https://www.villagemd.com/openapi.json
+    status: 404
+  - url: https://www.villagemedical.com/sitemap.xml
+    status: 200
+  - url: https://care.villagemedical.com/openapi.json
+    status: 200
+  - url: https://api.github.com/orgs/VillageMD
+    status: 200
+  checked: '2026-08-05'

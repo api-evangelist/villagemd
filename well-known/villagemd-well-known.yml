@@ -1,0 +1,128 @@
+generated: '2026-08-05'
+method: probed
+source: live probes of the /.well-known/ surface on every VillageMD host
+summary:
+  documents_found: 0
+  note: 'VillageMD publishes no /.well-known/ discovery documents on any host. No
+    security.txt, no OIDC/OAuth discovery, no api-catalog, no ai-plugin, no A2A agent
+    card, no llms.txt. No WellKnown, SecurityTxt or AgentCard pointer is wired in
+    apis.yml because nothing is present — this file records the probe, it does not
+    credit a surface.'
+soft_404_warning: 'care.villagemedical.com (Village Medical Telehealth) is a React
+  single-page app whose catch-all answers HTTP 200 with an identical 3,501-byte HTML
+  shell for EVERY unmatched path — including every /.well-known/* path, /openapi.json,
+  /swagger.json, /api-docs and /llms.txt. Those 200s are soft-404s and were rejected.
+  The control diff is byte-identical HTML returned for a random nonexistent control
+  path.'
+hosts:
+- host: https://www.villagemd.com
+  catch_all: none
+  control_probe:
+    path: /.well-known/ae-control-probe
+    status: 404
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+- host: https://www.villagemedical.com
+  catch_all: none
+  control_probe:
+    path: /.well-known/ae-control-probe
+    status: 404
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+- host: https://care.villagemedical.com
+  catch_all: spa-html-200
+  control_probe:
+    path: /zzz-control-does-not-exist
+    status: 200
+    body_bytes: 3501
+    verdict: catch-all SPA shell — every 200 below is a soft-404
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /.well-known/openid-configuration
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /.well-known/api-catalog
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /.well-known/agent-card.json
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /.well-known/agent.json
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /openapi.json
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /swagger.json
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /api-docs
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+  - path: /llms.txt
+    status: 200
+    verdict: soft-404 (HTML SPA shell, rejected)
+- host: https://www.summithealth.com
+  note: VillageMD operating company
+  documents:
+  - path: /llms.txt
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://www.citymd.com
+  note: VillageMD operating company
+  documents:
+  - path: /llms.txt
+    status: 404
+dns:
+  note: 'No developer, API, docs, FHIR, status, trust, security or mcp subdomain
+    resolves on villagemd.com — api.villagemd.com, api.villagemedical.com,
+    developer.villagemd.com, developers.villagemd.com, docs.villagemd.com,
+    fhir.villagemd.com, status.villagemd.com, trust.villagemd.com,
+    security.villagemd.com and mcp.villagemd.com are all NXDOMAIN.'

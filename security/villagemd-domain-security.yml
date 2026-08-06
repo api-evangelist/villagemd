@@ -1,0 +1,33 @@
+generated: '2026-08-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.villagemd.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 18 15:30:15 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: www.villagemedical.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 21 03:29:45 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: villagemd.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: villagemedical.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+x-note: >-
+  www.villagemedical.com is the patient-facing brand host and was probed by hand with
+  the same dig/openssl/HEAD checks the script runs; it is not reachable from a Website
+  or Portal pointer in apis.yml, so probe-domain-security.py did not pick it up.
