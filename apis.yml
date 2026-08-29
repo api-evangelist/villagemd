@@ -14,6 +14,17 @@ description: 'VillageMD is a Chicago-based, value-based primary care organizatio
   R4 APIs, which are operated and documented by athenahealth, not by VillageMD. Since
   Sycamore Partners took Walgreens Boots Alliance private in August 2025, VillageMD
   has operated as a standalone company in that portfolio.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.villagemd.com/hs-fs/hubfs/villagemd-logo-1.png
 url: https://raw.githubusercontent.com/api-evangelist/villagemd/refs/heads/main/apis.yml
 x-type: company
