@@ -64,5 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-VillageMD is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/villagemd_stock/
+VillageMD is a Chicago-based, value-based primary care organization that operates and supports physician practices across the United States through its Village Medical, Village Medical at Home, Summit Health, CityMD and Starling Physicians operating companies, serving millions of patients across primary care, multispecialty and urgent care. It runs clinics — free-standing practices, in-Walgreens practices, home-based care and virtual visits — rather than selling software, and its clinical record and patient-facing digital surface run on athenahealth: patient portals are hosted at practice-specific athenahealth portal subdomains and the Village Medical mobile app is the athenaPatient experience. VillageMD publishes no developer portal, no API documentation, no machine-readable specification and no SDK; the only public machine-readable interfaces touching its patients are athenahealth's certified FHIR R4 APIs, which are operated and documented by athenahealth, not by VillageMD. Since Sycamore Partners took Walgreens Boots Alliance private in August 2025, VillageMD has operated as a standalone company in that portfolio.
+
+**Areas:** Company · Healthcare · Primary Care · Value-Based Care · Medical Practices · Urgent Care · Telehealth · Patient Care · Clinics
+
+## VillageMD on APIs.io
+
+Everything profiled for VillageMD is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/villagemd/](https://apis.io/providers/villagemd/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Villagemd Domain Security](https://apis.io/security/villagemd/villagemd-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.villagemd.com/)
+- [Blog](https://www.villagemedical.com/journey-to-well)
+- [Terms of service](https://www.villagemedical.com/terms-and-conditions)
+- [Privacy policy](https://www.villagemedical.com/privacy-policy)
+- [GitHub](https://github.com/VillageMD)
+
+## API Evangelist rating
+
+**Kin Score 9.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.9** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/villagemd/](https://apis.io/providers/villagemd/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for VillageMD: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/villagemd/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
